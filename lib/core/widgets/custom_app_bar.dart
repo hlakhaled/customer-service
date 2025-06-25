@@ -1,11 +1,12 @@
 import 'package:customer_service/core/constatnts/app_colors.dart';
 import 'package:customer_service/core/utils/styles.dart';
 import 'package:customer_service/core/widgets/custom_divider.dart';
+import 'package:customer_service/data/common_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
-
+  const CustomAppBar({super.key, required this.commonModel});
+  final CommonModel commonModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,12 +25,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             },
           ),
           title: Text(
-            "Help & FAQS",
+            commonModel.title,
             style: Styles.textStyle18,
           ),
         ),
         Text(
-          "How Can We Help You?",
+          commonModel.description,
           style: Styles.textStyle16,
         ),
         const SizedBox(

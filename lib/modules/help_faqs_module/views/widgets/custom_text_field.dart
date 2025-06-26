@@ -1,4 +1,3 @@
-
 import 'package:customer_service/core/constatnts/app_colors.dart';
 import 'package:customer_service/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -24,17 +23,14 @@ class CustomTextField extends StatelessWidget {
             filled: true,
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
-                borderSide: const BorderSide(
-                    color: AppColors.beige)),
+                borderSide: const BorderSide(color: AppColors.beige)),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
-                borderSide: const BorderSide(
-                    color: AppColors.beige)),
+                borderSide: const BorderSide(color: AppColors.beige)),
             focusColor: AppColors.salmon,
             fillColor: AppColors.beige,
             hintText: "Search",
-            hintStyle: Styles.textStyle16
-                .copyWith(color: AppColors.brownRosy)),
+            hintStyle: Styles.textStyle16.copyWith(color: AppColors.brownRosy)),
       ),
     );
   }

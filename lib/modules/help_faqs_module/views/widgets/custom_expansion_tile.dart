@@ -1,4 +1,3 @@
-
 import 'package:customer_service/core/constatnts/app_colors.dart';
 import 'package:customer_service/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +23,7 @@ class CustomExpansionTile extends StatelessWidget {
         ),
         title: Text(
           "Lorem ipsum dolor sit amet?",
-          style: Styles.textStyle16Bold
-              .copyWith(color: AppColors.black),
+          style: Styles.textStyle16Bold.copyWith(color: AppColors.black),
         ),
         children: [
           ListTile(

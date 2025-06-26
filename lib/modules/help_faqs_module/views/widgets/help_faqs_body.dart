@@ -1,5 +1,8 @@
+import 'package:awesome_icons/awesome_icons.dart';
 import 'package:customer_service/core/widgets/custom_app_bar.dart';
 import 'package:customer_service/data/common_model.dart';
+import 'package:customer_service/data/contact_us_model.dart';
+import 'package:customer_service/modules/help_faqs_module/views/widgets/contact_body.dart';
 import 'package:customer_service/modules/help_faqs_module/views/widgets/custom_tab_bar.dart';
 
 import 'package:customer_service/modules/help_faqs_module/views/widgets/items_in_tab_bar.dart';
@@ -7,6 +10,35 @@ import 'package:flutter/material.dart';
 
 class HelpFaqsBody extends StatefulWidget {
   const HelpFaqsBody({super.key});
+
+  final List<ContactUsModel> contact = const [
+    ContactUsModel(
+      title: "Customer Service",
+      icon: Icons.support_agent,
+      describtion: "tel:+123456789", 
+    ),
+    ContactUsModel(
+      title: "Website",
+      icon: FontAwesomeIcons.globe,
+      describtion: "https://example.com", 
+    ),
+    ContactUsModel(
+      title: "Facebook",
+      icon: FontAwesomeIcons.facebook,
+      describtion: "https://facebook.com/yourpage", 
+    ),
+    ContactUsModel(
+      title: "Whatsapp",
+      icon: FontAwesomeIcons.whatsapp,
+      describtion: "https://wa.me/201234567890", 
+    ),
+    ContactUsModel(
+      title: "Instagram",
+      icon: FontAwesomeIcons.instagram,
+      describtion:
+          "https://instagram.com/yourprofile", 
+    ),
+  ];
 
   final List<Widget> firstTabBar = const [
     Tab(text: "FAQ"),
@@ -71,7 +103,7 @@ class _HelpFaqsBodyState extends State<HelpFaqsBody>
             controller: tabController,
             children: [
               ItemsInTabBar(tabController2: tabController2, widget: widget),
-              const Center(child: Text('Contact Us Content')),
+              ContactBody(widget: widget),
             ],
           ),
         ),

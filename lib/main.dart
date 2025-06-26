@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: AppRoutes.customerService,
+      initialRoute: AppRoutes.helpFaqs,
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
     );

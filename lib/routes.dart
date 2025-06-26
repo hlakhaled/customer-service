@@ -1,5 +1,7 @@
 import 'package:customer_service/modules/customer_service_module/bindings/customer_service_binding.dart';
 import 'package:customer_service/modules/customer_service_module/views/customer_service_screen.dart';
+import 'package:customer_service/modules/help_faqs_module/bindings/help_faqs_binding.dart';
+import 'package:customer_service/modules/help_faqs_module/views/help_faqs_view.dart';
 import 'package:get/get.dart';
 
 class AppPages {
@@ -9,11 +11,11 @@ class AppPages {
       page: () => const CustomerServiceScreen(),
       binding: CustomerServiceBinding(),
     ),
-    // GetPage(
-    //   name: AppRoutes.helpFaqs,
-    //   page: () => HelpFaqsView(),
-    //   binding: HelpFaqsBinding(),
-    // ),
+    GetPage(
+      name: AppRoutes.helpFaqs,
+      page: () => const HelpFaqsView(),
+      binding: HelpFaqsBinding(),
+    ),
     // GetPage(
     //   name: AppRoutes.contactUs,
     //   page: () => ContactUsView(),

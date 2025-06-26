@@ -1,4 +1,3 @@
-
 import 'package:customer_service/modules/help_faqs_module/views/widgets/expansion_tile_for_contact_us.dart';
 import 'package:customer_service/modules/help_faqs_module/views/widgets/help_faqs_body.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +18,7 @@ class ContactBody extends StatelessWidget {
           children: List.generate(
               5,
               (index) => ExpansionTileForContactUs(
+                    index: index,
                     contactUsModel: widget.contact[index],
                   ))),
     );

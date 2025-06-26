@@ -5,8 +5,9 @@ import 'package:customer_service/data/common_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, required this.commonModel});
+  const CustomAppBar({super.key, required this.commonModel, this.icon = false});
   final CommonModel commonModel;
+  final bool icon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,10 +25,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               Navigator.pop(context); // back navigation
             },
           ),
-          title: Text(
-            commonModel.title,
-            style: Styles.textStyle18,
-          ),
+          title: icon
+              ? Row(
+                  children: [
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    const Icon(
+                      Icons.support_agent,
+                      color: AppColors.salmon,
+                    ),
+                    Text(
+                      commonModel.title,
+                      style: Styles.textStyle18,
+                    ),
+                  ],
+                )
+              : Text(
+                  commonModel.title,
+                  style: Styles.textStyle18,
+                ),
         ),
         Text(
           commonModel.description,

@@ -1,11 +1,17 @@
 import 'package:customer_service/core/constatnts/app_colors.dart';
 import 'package:customer_service/core/utils/styles.dart';
 import 'package:customer_service/data/common_model.dart';
+import 'package:customer_service/modules/customer_service_module/controllers/customer_service_controller.dart';
+import 'package:customer_service/modules/help_faqs_module/controllers/customer_service_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class HelpingSection extends StatelessWidget {
-  const HelpingSection({super.key, required this.helpingSectionModel});
+  const HelpingSection(
+      {super.key, required this.helpingSectionModel, required this.index});
   final CommonModel helpingSectionModel;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,13 +31,20 @@ class HelpingSection extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          const CircleAvatar(
-            backgroundColor: AppColors.salmon,
-            radius: 15,
-            child: Icon(
-              Icons.navigate_next_rounded,
-              size: 30,
-              color: AppColors.white,
+          GestureDetector(
+            onTap: () {
+              index == 0
+                  ? Get.find<CustomerServiceController>().navigateToContactUs()
+                  : Get.find<CustomerServiceController>().navigateToHelpFaqs();
+            },
+            child: const CircleAvatar(
+              backgroundColor: AppColors.salmon,
+              radius: 15,
+              child: Icon(
+                Icons.navigate_next_rounded,
+                size: 30,
+                color: AppColors.white,
+              ),
             ),
           ),
         ],

@@ -26,7 +26,7 @@ class ItemsInTabBar extends StatelessWidget {
         Expanded(
           child: TabBarView(
             controller: tabController2,
-            children:List.generate(3, (index)=>   GeneralSectionInfo(),) 
+            children:List.generate(3, (index)=>   const GeneralSectionInfo(),) 
             
            
           ),

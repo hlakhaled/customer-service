@@ -39,14 +39,14 @@ class CustomerServiceBody extends StatelessWidget {
           child: CustomDivider(),
         ),
         SliverToBoxAdapter(
-            child: HelpingSection(
+            child: HelpingSection(index: 0,
           helpingSectionModel: help[0],
         )),
         const SliverToBoxAdapter(
           child: CustomDivider(),
         ),
         SliverToBoxAdapter(
-            child: HelpingSection(
+            child: HelpingSection(index: 1,
           helpingSectionModel: help[1],
         )),
       ],

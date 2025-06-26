@@ -7,6 +7,6 @@ class CustomerServiceController extends GetxController {
   }
 
   void navigateToContactUs() {
-    Get.toNamed(AppRoutes.contactUs);
+    Get.toNamed(AppRoutes.chat);
   }
 }

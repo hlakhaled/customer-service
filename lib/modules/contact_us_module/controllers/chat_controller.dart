@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 
 import 'package:uuid/uuid.dart';
 
-
 class ChatController extends GetxController {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final Uuid _uuid = const Uuid();
@@ -32,7 +31,7 @@ class ChatController extends GetxController {
 
     await _addMessage(cleaned, isUser: true);
     final reply = _generateAssistantResponse(cleaned);
-    await Future.delayed(const Duration(milliseconds: 500)); 
+    await Future.delayed(const Duration(milliseconds: 500));
     await _addMessage(reply, isUser: false);
   }
 
@@ -54,7 +53,6 @@ class ChatController extends GetxController {
     final lowerMessage = userMessage.toLowerCase().trim();
     final randomIndex = DateTime.now().millisecond % 3;
 
-    // Handle greetings
     if (lowerMessage.contains('hi') ||
         lowerMessage.contains('hello') ||
         lowerMessage.contains('hey')) {
@@ -73,14 +71,16 @@ class ChatController extends GetxController {
         lowerMessage.contains('why') ||
         lowerMessage.contains('where') ||
         lowerMessage.contains('who')) {
-      if (lowerMessage.contains('how are you') || lowerMessage.contains('how you doing')) {
+      if (lowerMessage.contains('how are you') ||
+          lowerMessage.contains('how you doing')) {
         final responses = [
           'I’m doing great, thanks for asking! How about you?',
           'Living the digital life! What’s good with you?',
           'All circuits firing, thanks! How’s your day going?'
         ];
         return responses[randomIndex];
-      } else if (lowerMessage.contains('what is') || lowerMessage.contains('what’s')) {
+      } else if (lowerMessage.contains('what is') ||
+          lowerMessage.contains('what’s')) {
         final responses = [
           'Curious, huh? Tell me more about what you’re asking, like “what’s AI?” or “what’s the weather?”!',
           'Ooh, a “what is” question! Can you give me a bit more context?',
@@ -104,7 +104,6 @@ class ChatController extends GetxController {
       }
     }
 
-    // Handle thanks
     if (lowerMessage.contains('thanks') || lowerMessage.contains('thank you')) {
       final responses = [
         'You’re so welcome! 😊 What else can I help with?',
@@ -114,7 +113,6 @@ class ChatController extends GetxController {
       return responses[randomIndex];
     }
 
-    // Handle app or customer service queries
     if (lowerMessage.contains('app') || lowerMessage.contains('help')) {
       final responses = [
         'Got a question about the app? Let me know what you need help with!',
@@ -124,7 +122,6 @@ class ChatController extends GetxController {
       return responses[randomIndex];
     }
 
-    // Generic responses for statements or unrecognized inputs
     final genericResponses = [
       'That’s cool! Tell me more about “$userMessage”!',
       'Interesting! What else can you share about that?',

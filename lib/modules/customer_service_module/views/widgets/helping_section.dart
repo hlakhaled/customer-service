@@ -2,10 +2,8 @@ import 'package:customer_service/core/constatnts/app_colors.dart';
 import 'package:customer_service/core/utils/styles.dart';
 import 'package:customer_service/data/common_model.dart';
 import 'package:customer_service/modules/customer_service_module/controllers/customer_service_controller.dart';
-import 'package:customer_service/modules/help_faqs_module/controllers/customer_service_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class HelpingSection extends StatelessWidget {
   const HelpingSection(

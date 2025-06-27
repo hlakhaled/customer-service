@@ -30,4 +30,6 @@ A Flutter-based Customer Service app that helps users get assistance through:
 - Simulated assistant replies
 - Real-time updates
 - Call center simulation using a dialog box
-https://github.com/user-attachments/assets/ac08c156-d4bd-4ee6-a96b-a77d34329ea0
+  
+[![Watch Demo](assets/demo_preview.png)](https://github.com/user-attachments/assets/ac08c156-d4bd-4ee6-a96b-a77d34329ea0)
+

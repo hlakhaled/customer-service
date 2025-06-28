@@ -1,16 +1,35 @@
-# customer_service
+# 📱 Customer Service Assistant App – Summary
 
-A new Flutter project.
+## 🎯 Main Purpose
+A Flutter-based Customer Service app that helps users get assistance through:
+- A helpful assistant screen
+- FAQ and support content
+- Live chat simulation
+- Direct contact options
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🧩 Key Screens & Features
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Customer Service Screen
+- Welcome message + assistant intro
+- Buttons: “How can we help you?” and “Help Center”
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. Help & FAQs Screen
+- Tab navigation: FAQ, Contact Us, General, Account, Services
+- Expandable question & answer sections
+- Search bar with keyword filtering
+- List of categorized help topics
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 3. Contact Us Screen
+- Contact methods with icons: Customer Service, Website, Facebook, WhatsApp, Instagram
+- Expandable contact details
+- Open external apps directly (e.g., WhatsApp)
+
+### 4. Real-time Chat (via Firebase Firestore)
+- Simulated assistant replies
+- Real-time updates
+- Call center simulation using a dialog box
+  
+[![Watch Demo](assets/demo_preview.png)](https://github.com/user-attachments/assets/ac08c156-d4bd-4ee6-a96b-a77d34329ea0)
+

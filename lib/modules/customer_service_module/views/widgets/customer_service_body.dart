@@ -1,4 +1,4 @@
-import 'package:customer_service/core/utils/styles.dart';
+import 'package:customer_service/core/constatnts/styles.dart';
 import 'package:customer_service/core/widgets/custom_app_bar.dart';
 import 'package:customer_service/core/widgets/custom_divider.dart';
 import 'package:customer_service/data/common_model.dart';

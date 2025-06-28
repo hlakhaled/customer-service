@@ -1,5 +1,5 @@
 import 'package:customer_service/core/constatnts/app_colors.dart';
-import 'package:customer_service/core/utils/styles.dart';
+import 'package:customer_service/core/constatnts/styles.dart';
 import 'package:customer_service/modules/help_faqs_module/views/widgets/custom_circle_avatar_for_arrow.dart';
 import 'package:flutter/material.dart';
 
